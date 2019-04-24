@@ -1,0 +1,91 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "3f515455-a34b-48c6-befd-af0c5a948979": {
+        "id": "3f515455-a34b-48c6-befd-af0c5a948979",
+        "parent": null,
+        "name": "telegram",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "d937101a-844d-4299-94a0-ed67a4006987"
+        ],
+        "isRemovable": false,
+        "filePath": "telegram"
+      },
+      "d937101a-844d-4299-94a0-ed67a4006987": {
+        "id": "d937101a-844d-4299-94a0-ed67a4006987",
+        "parent": "3f515455-a34b-48c6-befd-af0c5a948979",
+        "name": "function.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "telegram/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ],
+        "config": {
+          "runtime": "nodejs8.10",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        }
+      },
+      "a5f5d3c7-266a-4b42-bf6a-67111775eb0a": {
+        "id": "a5f5d3c7-266a-4b42-bf6a-67111775eb0a",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.telegramfunction = require(\"./telegram/function.js\").handler;",
+        "triggers": []
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "3f515455-a34b-48c6-befd-af0c5a948979",
+    "openFiles": [
+      "d937101a-844d-4299-94a0-ed67a4006987"
+    ],
+    "currentFileId": "d937101a-844d-4299-94a0-ed67a4006987",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {},
+        "globallyEditable": false
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "telegram",
+    "projectDescription": "asd",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east1",
+    "platform": "GCP",
+    "platformRegions": {},
+    "lastSave": 1556115704540
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "telegram",
+      "url": "https://github.com/sammosna/gcp-f1"
+    }
+  }
+}
